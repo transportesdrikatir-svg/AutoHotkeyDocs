@@ -28,6 +28,25 @@ Codex deve fazer apenas o que foi pedido pelo utilizador. Nao deve acrescentar a
 - No final, responder so com o essencial: o que foi criado/alterado, como usar e se ficou algo pendente.
 - Se uma regra nova for aprendida durante o trabalho, guardar em `AGENTS.md` ou em `.codex/memory.json` para nao repetir o erro.
 
+## Aplicacoes que Codex pode precisar
+
+Codex deve usar apenas as aplicacoes necessarias para cumprir o pedido exato. Nao deve abrir nem consultar aplicacoes extras por iniciativa propria.
+
+Aplicacoes principais permitidas quando forem necessarias:
+
+- GitHub/Codex: para ler e alterar ficheiros do repositorio.
+- WhatsApp no computador: fonte principal para ficheiros recebidos quando o pedido for baixar/descarregar.
+- Desktop/Escritorio: destino principal para guardar ficheiros baixados, dentro da pasta indicada pelo utilizador.
+- Python: apenas para scripts simples do projeto, memoria local e verificacoes pequenas.
+- Google Drive: usar apenas se o utilizador pedir claramente Google Drive ou disser que o ficheiro esta no Google Drive.
+
+Aplicacoes que nao deve usar sem pedido claro:
+
+- Google Drive, se o pedido nao mencionar Google Drive.
+- Navegador ou internet para pesquisar, se o pedido puder ser feito com ficheiros/instrucoes locais.
+- Ferramentas de conversao, OCR, renomeacao, analise ou organizacao, se o utilizador pediu apenas baixar.
+- Subagentes ou automatizacoes complicadas, salvo pedido explicito.
+
 ## Regra especial para baixar/descarregar ficheiros
 
 Quando o utilizador pedir apenas para baixar/descarregar ficheiros:
@@ -45,4 +64,4 @@ A memoria persistente deste repositorio deve ficar em `.codex/memory.json`. Code
 
 ## Frase curta para ativar este modo
 
-Ativa modo poupanca de creditos. Le primeiro `AGENTS.md`, `.codex/config.toml`, scripts e memoria local. Nao repitas buscas nem tarefas. Faz so o que foi pedido. Nao uses subagentes nem relatorios longos. Se for apenas baixar, procura primeiro no WhatsApp do computador e baixa apenas para a pasta indicada no Desktop. Usa Google Drive so se for pedido claramente. Nao facas analise, renomeacao ou passos extra.
+Ativa modo poupanca de creditos. Le primeiro `AGENTS.md`, `.codex/config.toml`, scripts e memoria local. Nao repitas buscas nem tarefas. Faz so o que foi pedido. Usa apenas as aplicacoes necessarias. Nao uses subagentes nem relatorios longos. Se for apenas baixar, procura primeiro no WhatsApp do computador e baixa apenas para a pasta indicada no Desktop. Usa Google Drive so se for pedido claramente. Nao facas analise, renomeacao ou passos extra.
