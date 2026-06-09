@@ -1,0 +1,32 @@
+# Configuracao conservadora para Codex neste repositorio.
+# Objetivo: reduzir exploracao desnecessaria e evitar repeticao de trabalho.
+
+[credit_saver]
+enabled = true
+language_preference = "pt_or_es_simple"
+read_agents_first = true
+read_memory_first = true
+memory_file = ".codex/memory.json"
+prefer_existing_scripts = true
+avoid_broad_search = true
+minimal_changes = true
+minimal_final_report = true
+
+[subagents]
+default_enabled = false
+use_only_when_user_explicitly_asks = true
+max_subagents_without_extra_confirmation = 0
+
+[verification]
+prefer_targeted_checks = true
+avoid_large_builds_without_need = true
+ask_before_expensive_validation = true
+
+[download_only]
+prefer_whatsapp_on_computer = true
+use_google_drive_only_if_user_requests = true
+desktop_folder_required = true
+no_analysis = true
+no_rename = true
+no_convert = true
+no_organize = true
