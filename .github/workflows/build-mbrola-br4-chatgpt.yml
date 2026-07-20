@@ -1,0 +1,22 @@
+name: Build MBROLA Brazilian Female Voice
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/build-mbrola-br4-chatgpt.yml'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Enable Ubuntu multiverse
+        run: |
+          sudo add-apt-repository -y multiverse
+          sudo apt-get update
+
+      - name: Install MBROLA and Brazilian female voice
+        run: |
+          sudo apt-get install -y mbrola mbrola-br4
+         
